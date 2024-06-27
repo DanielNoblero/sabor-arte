@@ -1,16 +1,18 @@
 import React from 'react';
 import './index.css';
 import Nav from './components/Nav';
-import Main2 from './components/Main2';
 import ProductosList from './components/ProductosList';
-import Footer from './components/Footer';
+import { Footer, Header } from './components/Footer';
 
 
 function App() {
   return (
     <>
+
+      <Header />
       <Nav />
-      <Main2 />
+      <main>
+      </main>
       <section>
         <ProductosList />
       </section>

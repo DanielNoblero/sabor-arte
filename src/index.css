@@ -11,7 +11,7 @@
 
 main {
     height: 600px;
-    background-image: url(./assets/multimedia/mesamadera.jpg);
+    background-image: url(/src/assets/imagenes/mesamadera.jpg);
     background-size: cover;
     background-position: bottom;
 }
