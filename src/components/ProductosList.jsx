@@ -86,7 +86,6 @@ function ProductosList() {
                     precio={producto.precio}
                     onButtonClick={() => handleButtonClick(producto.titulo)}
                 />
-                
             ))}
             
         </div>

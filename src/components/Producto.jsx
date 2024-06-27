@@ -8,7 +8,8 @@ function Producto(props) {
                 <img className="row-img" src={props.img} alt={props.titulo} style={{ width: '300px' }} />
                 <p>{props.descripcion}</p>
                 <p className="row-p2">Precio: ${props.precio}</p>
-                <button className="button" onClick={props.onButtonClick}>Comprar</button>
+                <button className="button" onClick={props.onButtonClick}>Agregar al carrito</button>
+                <button className="button" onClick={props.onButtonClick}>Ver detalle</button>
             </div>
         </section>
     );
