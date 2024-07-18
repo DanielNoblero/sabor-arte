@@ -10,7 +10,7 @@ const products = [
     {
         id: 2,
         titulo: "Pizza",
-        category: "Entradas",
+        category: "Principal",
         precio: 600,
         descripcion: " Una pizza casera típica consiste en una base de masa crujiente y esponjosa, recién horneada, cubierta con una salsa de tomate rica y aromática. Sobre esta base se esparcen generosamente queso mozzarella derretido y dorado, y se complementa con ingredientes al gusto como rodajas de pepperoni, champiñones frescos, pimientos, albahaca, tomate fresco y cebolla. Este platillo es apreciado por su frescura y la posibilidad de personalizar los toppings según las preferencias de cada uno.",
         img: "/src/assets/imagenes/pizza.jpg"
@@ -78,6 +78,22 @@ const products = [
         precio: 250,
         descripcion: " El pay de queso, también conocido como cheesecake en inglés, es un postre sumamente popular en todo el mundo. Su origen se remonta a la antigua Grecia, donde se preparaba una versión más simple con queso fresco, miel y trigo. Con el tiempo, esta delicia ha evolucionado y se ha convertido en una variedad de sabores y estilos.",
         img: "/src/assets/imagenes/pay-de-queso.jpg"
+    },
+    {
+        id: 11,
+        titulo: "Sopa de Vegetales",
+        category: "Entradas",
+        precio: 250,
+        descripcion: " La sopa de verdura es un plato saludable y reconfortante que consiste en una variedad de vegetales cocidos en caldo. Los ingredientes comunes incluyen zanahorias, papas, cebollas, apio, tomates y espinacas, aunque puede adaptarse según la disponibilidad y preferencia. Se sazona con hierbas y especias como ajo, perejil, tomillo y laurel. Es nutritiva, baja en calorías y rica en vitaminas, minerales y fibra, ideal para una alimentación equilibrada.",
+        img: "/src/assets/imagenes/sopa.jpeg"
+    },
+    {
+        id: 12,
+        titulo: "Hamburguesa",
+        category: "Principal",
+        precio: 250,
+        descripcion: " La hamburguesa es un popular plato de comida rápida que consiste en una porción de carne molida, generalmente de res, cocinada a la parrilla o frita, y servida entre dos mitades de pan. Suele acompañarse con ingredientes como lechuga, tomate, cebolla, pepinillos, queso, tocino y diversas salsas como ketchup, mostaza y mayonesa. La hamburguesa puede personalizarse con una amplia variedad de toppings y condimentos, y es conocida por su conveniencia y sabor.",
+        img: "/src/assets/imagenes/hamburguesa.jpg"
     }
 ];
 

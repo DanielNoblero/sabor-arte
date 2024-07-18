@@ -1,10 +1,14 @@
 import React from 'react';
 import './index.css';
-import ItemListContainer from './components/ItemlListContainer/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Nav from './components/Navbar/Nav';
-import { Footer } from './components/Footer';
+import { Footer } from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SignIn from './components/SignIn/SignIn';
+import SignUp from './components/SignUp/SignUp'; 
+import ContactUs from './components/ContactUs/ContactUs';
+import CategoryWrapper from './components/CategoryWrapper/CategoryWrapper'
 
 function App() {
   return (
@@ -19,8 +23,11 @@ function App() {
       <section>
         <Routes>
           <Route path='/' element={<ItemListContainer greetings={"Lista de productos"} />} />
-          <Route path='category/:category' element={<ItemListContainer />} />
-          <Route path='detail/:id' element={<ItemDetailContainer />} />
+          <Route path='category/:category' element={<CategoryWrapper />} />
+            <Route path='detail/:id' element={<ItemDetailContainer />} />
+            <Route path='/signin' element={<SignIn />} />
+            <Route path='/signup' element={<SignUp />} />
+            <Route path='/contactus' element={<ContactUs />} />
         </Routes>
       </section>
       <Footer />
