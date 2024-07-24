@@ -19,7 +19,7 @@ function Nav() {
                 <Link to="/category/Postre" className="nav-item" style={{ '--i': 2 }}>Postres</Link>
                 <Link to="/signin" className="nav-item" style={{ '--i': 3 }}>Iniciar sesión</Link>
                 <Link to="/signup" className="nav-item" style={{ '--i': 4 }}>Registrarse</Link>
-                <Link to="/contactus" className="nav-item" style={{ '--i': 5 }}>Contactenos</Link>
+                <Link to="/contactus" className="nav-item" style={{ '--i': 5 }}>Contactenos     </Link>
                 <CartWidget />
             </nav>
         </header>

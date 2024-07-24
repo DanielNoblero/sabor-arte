@@ -2,21 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { getProducts, getProductsByCategory } from '../Productos';
 import Item from '../Item/Item';
 
+const ItemListContainer = ({ greetings }) => {
+    const [products, setProducts] = useState([]);
 
-    const ItemListContainer = ({ greetings }) => {
-        const [products, setProducts] = useState([]);
-    
-        useEffect(() => {
-            if (greetings && greetings !== "Lista de productos") {
-                getProductsByCategory(greetings)
-                    .then((res) => setProducts(res))
-                    .catch((err) => console.log(err));
-            } else {
-                getProducts()
-                    .then((res) => setProducts(res))
-                    .catch((err) => console.log(err));
-            }
-        }, [greetings]);
+    useEffect(() => {
+        if (greetings && greetings !== "Lista de productos") {
+            getProductsByCategory(greetings)
+                .then((res) => setProducts(res))
+                .catch((err) => console.log(err));
+        } else {
+            getProducts()
+                .then((res) => setProducts(res))
+                .catch((err) => console.log(err));
+        }
+    }, [greetings]);
 
     return (
         <div>

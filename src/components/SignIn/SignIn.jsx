@@ -9,6 +9,7 @@ const SignIn = () => {
     };
 
     return (
+        <div className='singin'>
         <div className="wrapper">
             <form onSubmit={login}>
                 <h1>Iniciar Sesión</h1>
@@ -34,6 +35,7 @@ const SignIn = () => {
                 <a href="#" className="fab fa-facebook-f"></a>
                 <a href="#" className="fab fa-google-plus-g"></a>
             </div>
+        </div>
         </div>
     );
 };
