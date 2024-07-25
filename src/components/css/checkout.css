@@ -10,24 +10,7 @@
 	--text2regular: 300 0.75rem / normal Roboto;
 }
 
-html,
-body {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	min-height: 100vh;
-}
 
-body {
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: url(../multimedia/mesamadera.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-	margin-top: 30px;
-}
 
 .card {
 	background-color: var(--white);
@@ -45,12 +28,9 @@ body {
 	flex-direction: column;
 }
 
-h1 {
-	font: var(--heading1);
-	color: var(--black);
-}
 
-p {
+
+.p2 {
 	font: var(--text2regular);
 }
 

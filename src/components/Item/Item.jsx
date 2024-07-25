@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Item = ({ id, img, precio, titulo }) => {
     return (
         <section className="container">
@@ -11,6 +12,7 @@ const Item = ({ id, img, precio, titulo }) => {
                 <Link to={`/detail/${id}`}>
                     <button className="button">Ver detalle</button>
                 </Link>
+                
             </div>
         </section>
     );

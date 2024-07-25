@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './components/Navbar/Nav';
 import { Footer } from './components/Footer/Footer';
@@ -9,13 +9,20 @@ import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
 import ContactUs from './components/ContactUs/ContactUs';
 import Main from './components/Main/main';
+import { CartProvider } from './components/Context/CartContex';
+import Cart from './components/cart/cart';
+import Checkout from './components/Checkout/Checkout';
 
 const App = () => {
   const location = useLocation();
-  const showMain = location.pathname === '/' || location.pathname.startsWith('/detail') || location.pathname.startsWith('/category');
+  const showMain = location.pathname === '/' || location.pathname.startsWith('/detail') || location.pathname.startsWith('/category')
+  || location.pathname.startsWith('/cart');
+
+
 
   return (
     <>
+    <CartProvider>
       <Nav />
       {showMain && <Main />}
       <section>
@@ -26,9 +33,12 @@ const App = () => {
           <Route path='/signin' element={<SignIn />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/contactus' element={<ContactUs />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/checkout' element={<Checkout />} />
         </Routes>
       </section>
       <Footer />
+      </CartProvider>
     </>
   );
 };
