@@ -1,30 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import '../css/signin.css';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../../service/firebase';
 
-const SignUp = () => {
-    const signup = (e) => {
+const SignIn = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
+
+    const handleSignIn = async (e) => {
         e.preventDefault();
-        console.log("Registrarse");
+        try {
+            await createUserWithEmailAndPassword(auth, email, password);
+            console.log("Inicio de sesión exitoso");
+            navigate('/'); 
+        } catch (error) {
+            setError(error.message);
+            console.error("Error al iniciar sesión:", error.code, error.message);
+        }
     };
 
     return (
-        <div className='singin'>
+        <div className='signin'>
             <div className="wrapper">
-                <form onSubmit={signup}>
-                    <h1>Registro</h1>
+                <form onSubmit={handleSignIn}>
+                    <h1>Registrace</h1>
+                    {error && <p className="error-message">{error}</p>}
                     <div className="input-box">
-                        <input type="text" placeholder="Usuario" id="username" required />
+                        <input 
+                            type="email" 
+                            placeholder="Correo electrónico" 
+                            required 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
                         <i className='bx bxs-user'></i>
                     </div>
                     <div className="input-box">
-                        <input type="password" placeholder="Contraseña" id="password" required />
+                        <input 
+                            type="password" 
+                            placeholder="Contraseña" 
+                            required 
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
                         <i className='bx bxs-lock-alt'></i>
                     </div>
-                    <button type="submit" className="btn" id="register">Registrarse</button>
-                    <div className="registre-link">
-                        <p>O registrarse con</p>
+                    <div className="remember-forgot">
+                        <label><input type="checkbox" />Recordarme</label>
+                        <Link to="/forgotpsw">¿Olvidaste tu contraseña?</Link>
+                    </div>
+                    <button type="submit" className="btn">Entrar</button>
+                    <div className="register-link">
+                        <p>¿No tienes cuenta? <Link to="/signup">Regístrate</Link></p>
                     </div>
                 </form>
+                <div className="register-link">o inicia sesión con</div>
                 <div className="socials">
                     <a href="#" className="fab fa-facebook-f"></a>
                     <a href="#" className="fab fa-google-plus-g"></a>
@@ -34,4 +67,4 @@ const SignUp = () => {
     );
 };
 
-export default SignUp;
+export default SignIn;

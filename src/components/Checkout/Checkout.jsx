@@ -51,16 +51,13 @@ function PaymentForm() {
             const docRef = await addDoc(collection(db, 'orders'), order);
             console.log('Order created with ID: ', docRef.id);
 
-            // Limpia el carrito después de confirmar la orden
             clearCart();
 
-            // Redirige a la página de confirmación de la orden
             navigate('/order-confirmation');
 
-            // Redirige al menú principal después de un breve período
             setTimeout(() => {
                 navigate('/');
-            }, 5000); // Cambia el tiempo según sea necesario (5000ms = 5 segundos)
+            }, 5000); 
         } catch (e) {
             console.error('Error adding document: ', e);
         }
