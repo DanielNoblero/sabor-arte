@@ -15,6 +15,7 @@ const ItemDetail = ({ stock, img, precio, titulo, descripcion, id }) => {
 
     }
 
+
     return (
         <section className="container">
             <div className="row">

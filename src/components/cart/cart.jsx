@@ -1,15 +1,20 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../Context/CartContex';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
     const { cart, emptyCart } = useContext(CartContext);
+    const navigate = useNavigate();
 
     const getTotalPrice = () => {
         return cart.reduce((acc, prod) => acc + prod.precio * prod.quantity, 0);
     };
 
     const totalPrice = getTotalPrice();
+
+    const handleCheckout = () => {
+        navigate('/checkout');
+    };
 
     return (
         <section className='container'>
@@ -33,9 +38,7 @@ const Cart = () => {
                             <h3>Total: ${totalPrice}</h3>
                         </div>
                         <button className="button" onClick={emptyCart}>Vaciar Carrito</button>
-                        <Link to='/Checkout'>
-                            <button className="button">Pagar</button>
-                        </Link>
+                        <button className="button" onClick={handleCheckout}>Pagar</button>
                     </>
                 )}
             </div>
@@ -44,4 +47,3 @@ const Cart = () => {
 };
 
 export default Cart;
-

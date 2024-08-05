@@ -4,7 +4,7 @@ import ItemListContainer from '../ItemListContainer/ItemListContainer';
 
 const CategoryWrapper = () => {
     const { category } = useParams();
-    return <ItemListContainer greetings={category} />;
+    return <ItemListContainer greetings={category} categoryId={category} />;
 };
 
 export default CategoryWrapper;

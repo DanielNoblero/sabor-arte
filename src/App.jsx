@@ -12,6 +12,7 @@ import Main from './components/Main/main';
 import { CartProvider } from './components/Context/CartContex';
 import Cart from './components/cart/cart';
 import Checkout from './components/Checkout/Checkout';
+import OrderConfirmation from './components/OrderConfirm/OrderConfirmation';
 
 const App = () => {
   const location = useLocation();
@@ -34,6 +35,7 @@ const App = () => {
           <Route path='/signup' element={<SignUp />} />
           <Route path='/contactus' element={<ContactUs />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path="/order-confirmation" element={<OrderConfirmation />} />
           <Route path='/checkout' element={<Checkout />} />
         </Routes>
       </section>

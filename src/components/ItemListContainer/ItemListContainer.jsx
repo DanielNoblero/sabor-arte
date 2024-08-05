@@ -1,21 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import { getProducts, getProductsByCategory } from '../Productos';
 import Item from '../Item/Item';
+import { db } from '../../service/firebase/index';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
-const ItemListContainer = ({ greetings }) => {
+const ItemListContainer = ({ greetings, categoryId }) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        if (greetings && greetings !== "Lista de productos") {
-            getProductsByCategory(greetings)
-                .then((res) => setProducts(res))
-                .catch((err) => console.log(err));
-        } else {
-            getProducts()
-                .then((res) => setProducts(res))
-                .catch((err) => console.log(err));
-        }
-    }, [greetings]);
+        const fetchProducts = async () => {
+            try {
+                const collectionRef = categoryId
+                    ? query(collection(db, "products"), where("category", "==", categoryId))
+                    : collection(db, "products");
+
+                const querySnapshot = await getDocs(collectionRef);
+                const products = querySnapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                setProducts(products);
+            } catch (error) {
+                console.error("Error fetching products: ", error);
+            }
+        };
+
+        fetchProducts();
+    }, [categoryId]);
 
     return (
         <div>
