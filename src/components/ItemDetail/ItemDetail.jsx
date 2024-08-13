@@ -7,14 +7,11 @@ const ItemDetail = ({ stock, img, precio, titulo, descripcion, id }) => {
     const { addItem } = useCart();
 
     const handleAdd = (count) => {
-
-        const produtObj = {
+        const productObj = {
             id, titulo, precio, quantity: count
-        }
-        addItem(produtObj)
-
-    }
-
+        };
+        addItem(productObj);
+    };
 
     return (
         <section className="container">
@@ -26,13 +23,10 @@ const ItemDetail = ({ stock, img, precio, titulo, descripcion, id }) => {
                 <Link to="/">
                     <button className="button">Volver</button>
                 </Link>
-                
-                        <ItemCount stock={stock} onAdd={handleAdd} />
+                <ItemCount stock={stock} onAdd={handleAdd} />
             </div>
         </section>
-
     );
-
 };
 
 export default ItemDetail;

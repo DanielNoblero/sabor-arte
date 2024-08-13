@@ -28,8 +28,7 @@ function PaymentForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        // Verifica que la fecha de expiración tenga el formato MM/YY
+        
         const expirationRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
         if (!expirationRegex.test(formData.expiration)) {
             alert('Expiration date must be in MM/YY format');
@@ -64,7 +63,7 @@ function PaymentForm() {
     };
 
     return (
-        <div className='singin'>
+        <div className='signin'>
             <div className="card">
                 <div className="card__header">
                     <h1>Payment information</h1>

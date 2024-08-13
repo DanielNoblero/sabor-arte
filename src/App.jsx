@@ -18,8 +18,8 @@ import OrderConfirmation from './components/OrderConfirm/OrderConfirmation';
 const App = () => {
   const location = useLocation();
   const showMain = location.pathname === '/' || location.pathname.startsWith('/detail') || location.pathname.startsWith('/category')
-   || location.pathname.startsWith('/cart');
-  
+    || location.pathname.startsWith('/cart');
+
   return (
     <AuthProvider>
       <CartProvider>

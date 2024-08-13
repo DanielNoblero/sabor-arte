@@ -17,10 +17,16 @@ export const CartProvider = ({ children }) => {
     };
 
     const addItem = (productoToAdd) => {
-        if (!isInCart(productoToAdd.id)) {
-            setCart(prev => [...prev, productoToAdd]);
+        if (isInCart(productoToAdd.id)) {
+            setCart(prevCart =>
+                prevCart.map(prod =>
+                    prod.id === productoToAdd.id
+                        ? { ...prod, quantity: prod.quantity + productoToAdd.quantity }
+                        : prod
+                )
+            );
         } else {
-            console.error("El producto ya está en el carrito");
+            setCart(prevCart => [...prevCart, { ...productoToAdd }]);
         }
     };
 
