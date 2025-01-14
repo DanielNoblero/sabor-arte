@@ -15,12 +15,11 @@ import Cart from './components/cart/cart';
 import Checkout from './components/Checkout/Checkout';
 import OrderConfirmation from './components/OrderConfirm/OrderConfirmation';
 import './local/i18n';
-import CardWidget from './components/CartWidget/CartWidget';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   const location = useLocation();
-  const showMain = location.pathname === '/' || location.pathname.startsWith('/detail') || location.pathname.startsWith('/category')
-    || location.pathname.startsWith('/cart');
+  const showMain = ['/', '/detail', '/category', '/cart'].some(path => location.pathname.startsWith(path));
 
   return (
     <AuthProvider>
@@ -41,6 +40,7 @@ const App = () => {
           </Routes>
         </section>
         <Footer />
+        <ToastContainer />
       </CartProvider>
     </AuthProvider>
   );

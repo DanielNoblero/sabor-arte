@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { toast } from 'react-toastify'; // Importar Toastify
+import 'react-toastify/dist/ReactToastify.css'; // Importar estilos de Toastify
 
 function ItemCount({ initialValue = 1, stock, onAdd }) {
     const { t } = useTranslation(); // Hook para traducción
@@ -17,12 +19,19 @@ function ItemCount({ initialValue = 1, stock, onAdd }) {
         }
     };
 
+    const handleAdd = () => {
+        onAdd(count); // Llama a la función `onAdd` pasada por props
+        toast.success(t('itemCount.toastAdded', { count })); // Notificación de éxito
+    };
+
     return (
-        <div className='item-count'>
-            <button className='button2' onClick={decrement}>-</button>
+        <div className="item-count">
+            <button className="button2" onClick={decrement}>-</button>
             <h1>{count}</h1>
-            <button className='button2' onClick={increment}>+</button>
-            <button className='button' onClick={() => onAdd(count)}>{t('itemCount.addToCartButton')}</button> {/* Traducción del botón */}
+            <button className="button2" onClick={increment}>+</button>
+            <button className="button" onClick={handleAdd}>
+                {t('itemCount.addToCartButton')}
+            </button>
         </div>
     );
 }

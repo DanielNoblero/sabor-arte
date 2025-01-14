@@ -30,6 +30,20 @@ export const CartProvider = ({ children }) => {
         }
     };
 
+    const removeItem = (id) => {
+        setCart(prevCart => {
+            const product = prevCart.find(prod => prod.id === id);
+            if (product && product.quantity > 1) {
+                return prevCart.map(prod =>
+                    prod.id === id
+                        ? { ...prod, quantity: prod.quantity - 1 }
+                        : prod
+                );
+            }
+            return prevCart.filter(prod => prod.id !== id);
+        });
+    };
+
     const getTotalQuantity = () => {
         return cart.reduce((acc, prod) => acc + prod.quantity, 0);
     };
@@ -39,11 +53,7 @@ export const CartProvider = ({ children }) => {
     };
 
     const getTotal = () => {
-        return cart.reduce((acc, item) => acc + item.quantity * item.price, 0);
-    };
-
-    const clearCart = () => {
-        setCart([]);
+        return cart.reduce((acc, item) => acc + item.quantity * item.precio, 0);
     };
 
     const totalQuantity = getTotalQuantity();
@@ -51,11 +61,11 @@ export const CartProvider = ({ children }) => {
     const contextValues = {
         cart,
         addItem,
+        removeItem,
         isInCart,
         getTotal,
         totalQuantity,
         emptyCart,
-        clearCart
     };
 
     return (

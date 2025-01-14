@@ -12,20 +12,30 @@ export const ItemDetailContainer = () => {
     const { t, i18n } = useTranslation();
 
     useEffect(() => {
+        console.log('Fetching product with ID:', id);
         getDoc(doc(db, "products", id))
             .then((querySnapshot) => {
-                const productData = querySnapshot.data();
-                const product = {
-                    id: querySnapshot.id,
-                    titulo: t(`product_${id}.titulo`, { defaultValue: productData.titulo }),
-                    descripcion: t(`product_${id}.descripcion`, { defaultValue: productData.descripcion }),
-                    precio: productData.precio,
-                    stock: productData.stock,
-                    img: productData.img,
-                };
-                setProduct(product);
+                if (querySnapshot.exists()) {
+                    const productData = querySnapshot.data();
+                    console.log('Product data from Firestore:', productData);
+                    const product = {
+                        id: querySnapshot.id,
+                        titulo: t(`product_${id}.titulo`, { defaultValue: productData.titulo }),
+                        descripcion: t(`product_${id}.descripcion`, { defaultValue: productData.descripcion }),
+                        precio: productData.precio,
+                        stock: productData.stock,
+                        img: productData.img,
+                    };
+                    console.log('Translated product data:', product);
+                    setProduct(product);
+                } else {
+                    setError('Producto no encontrado');
+                }
             })
-            .catch(() => setError('Error al cargar el producto'));
+            .catch((err) => {
+                console.error('Error fetching product:', err);
+                setError('Error al cargar el producto');
+            });
     }, [id, i18n.language]);
 
     return (

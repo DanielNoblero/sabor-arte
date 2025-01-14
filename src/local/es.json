@@ -14,26 +14,36 @@
   "signUp": "Registrarse",
   "contactUs": "Contáctenos",
   "Language": "Idioma",
-  "cart": {
-    "title": "Carrito",
+    "cart": {
+    "title": "Tu Carrito",
     "quantity": "Cantidad",
     "total": "Total",
-    "emptyMessage": "El carrito está vacío",
+    "emptyMessage": "Tu carrito está vacío.",
+    "addButton": "+",
+    "removeButton": "-",
     "emptyCartButton": "Vaciar Carrito",
-    "checkoutButton": "Pagar"
+    "checkoutButton": "Finalizar Compra",
+    "toastAdded": "Se agregó {{titulo}} al carrito.",
+    "toastRemoved": "Se quitó {{titulo}} del carrito."
   },
   "item": {
     "viewDetailsButton": "Ver detalle"
   },
   "itemCount": {
-    "addToCartButton": "Agregar al Carrito"
+    "addToCartButton": "Agregar al Carrito",
+     "toastAdded": "Se agregó {{count}} artículo(s) al carrito"
   },
   "itemDetail": {
     "backButton": "Volver"
   },
   "product_1": {
-    "titulo": "Tacos",
-    "descripcion": "Los tacos son un platillo mexicano popular que consiste en tortillas pequeñas, típicamente de maíz, rellenas de una variedad de ingredientes. Los rellenos clásicos incluyen carne asada, pollo, pescado, o carnitas, acompañados de cebolla, cilantro, y salsa fresca. Se pueden añadir otros complementos como guacamole, queso, o frijoles refritos. Los tacos destacan por su sabor intenso y su capacidad de personalización, siendo un alimento básico tanto en eventos informales como en comidas familiares."
+        "titulo": "Tacos",
+        "descripcion": "Los tacos son un platillo mexicano popular hecho de pequeñas tortillas, típicamente de maíz, rellenas de una variedad de ingredientes. Los rellenos clásicos incluyen carne asada, pollo, pescado o carnitas, acompañados de cebolla, cilantro y salsa fresca. Otros ingredientes como guacamole, queso o frijoles refritos pueden ser añadidos. Los tacos destacan por su intenso sabor y personalización, siendo un básico en eventos informales así como en comidas familiares."
+  },
+  
+  "product_2": {
+    "titulo": "Hamburguesa",
+    "descripcion": "Las hamburguesas son un platillo clásico estadounidense que consiste en una hamburguesa de carne molida servida en un pan. La hamburguesa se sazona y se asa a la parrilla, luego se cubre con queso, lechuga, tomate, cebolla, pepinillos, y condimentos como ketchup y mostaza. Las hamburguesas son conocidas por su sabor jugoso y su versatilidad, con infinitas variaciones y complementos para satisfacer todos los gustos."	
   },
   "orderConfirmation": {
     "title": "Orden Creada",

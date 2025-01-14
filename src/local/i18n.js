@@ -4,16 +4,17 @@ import en from './en.json';
 import es from './es.json';
 
 i18n
-  .use(initReactI18next)
-  .init({
-    resources: {
-      en: { translation: en },
-      es: { translation: es },
-    },
-    lng: 'es',  // Idioma predeterminado
-    fallbackLng: 'es',
-    interpolation: {
-      escapeValue: false, // React ya se encarga del escape
-    },
-  });
+    .use(initReactI18next)
+    .init({
+        resources: {
+            en: { translation: en },
+            es: { translation: es },
+        },
+        lng: 'es',  // Idioma predeterminado
+        fallbackLng: 'es',
+        interpolation: {
+            escapeValue: false, // React ya se encarga del escape
+        },
+    });
 
+export default i18n;
