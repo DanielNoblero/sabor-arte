@@ -7,11 +7,9 @@ function CardWidget() {
 
     return (
         <Link to="/cart" className="cart-widget">
-            <i className="fa-solid fa-cart-shopping"></i>
-            
-            <span className="cart-count"></span> {totalQuantity}
-            
-        </Link>
+    <i className="fa-solid fa-cart-shopping"></i> {/* Usando el icono directamente */}
+    <span className="cart-count"></span> {totalQuantity}
+</Link>
     );
 }
 

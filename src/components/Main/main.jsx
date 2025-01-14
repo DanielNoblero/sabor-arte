@@ -1,13 +1,18 @@
 import React from 'react';
 import '../css/index.css';
+import { useTranslation } from 'react-i18next';
 
-const Main = () => (
-    <main>
-        <div className="call">
-            <h1>Sabor & Arte</h1>
-            <p>Somos una empresa donde cocinar es nuestra pasión y nuestra comida se basa en una comida rica, abundante y casera.</p>
-        </div>
-    </main>
-);
+const Main = () => {
+    const { t } = useTranslation(); // Hook para obtener traducciones
+
+    return (
+        <main>
+            <div className="call">
+                <h1>{t('companyName')}</h1> {/* Traducción dinámica para el nombre */}
+                <p>{t('companyDescription')}</p> {/* Traducción dinámica para la descripción */}
+            </div>
+        </main>
+    );
+};
 
 export default Main;

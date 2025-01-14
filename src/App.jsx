@@ -14,6 +14,8 @@ import ContactUs from './components/ContactUs/ContactUs';
 import Cart from './components/cart/cart';
 import Checkout from './components/Checkout/Checkout';
 import OrderConfirmation from './components/OrderConfirm/OrderConfirmation';
+import './local/i18n';
+import CardWidget from './components/CartWidget/CartWidget';
 
 const App = () => {
   const location = useLocation();

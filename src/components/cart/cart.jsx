@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../Context/CartContex';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Cart = () => {
+    const { t } = useTranslation(); // Hook para traducción
     const { cart, emptyCart } = useContext(CartContext);
     const navigate = useNavigate();
 
@@ -17,28 +19,32 @@ const Cart = () => {
     };
 
     return (
-        <section className='container'>
+        <section className='container2'>
             <div className='row2'>
-                <h1>Carrito</h1>
+                <h1>{t('cart.title')}</h1>
                 {cart.length > 0 ? (
                     cart.map((prod) => (
                         <div key={prod.id} className='cart-item'>
                             <h3>{prod.titulo}</h3>
                             <p className='row-p2'>${prod.precio}</p>
-                            <p>Cantidad: {prod.quantity}</p>
+                            <p>{t('cart.quantity')}: {prod.quantity}</p>
                             <br />
                         </div>
                     ))
                 ) : (
-                    <p>El carrito está vacío</p>
+                    <p>{t('cart.emptyMessage')}</p>
                 )}
                 {cart.length > 0 && (
                     <>
                         <div className='total'>
-                            <h3>Total: ${totalPrice}</h3>
+                            <h3>{t('cart.total')}: ${totalPrice}</h3>
                         </div>
-                        <button className="button" onClick={emptyCart}>Vaciar Carrito</button>
-                        <button className="button" onClick={handleCheckout}>Pagar</button>
+                        <button className="button" onClick={emptyCart}>
+                            {t('cart.emptyCartButton')}
+                        </button>
+                        <button className="button" onClick={handleCheckout}>
+                            {t('cart.checkoutButton')}
+                        </button>
                     </>
                 )}
             </div>

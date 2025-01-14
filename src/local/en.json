@@ -1,0 +1,81 @@
+{
+  "welcome": "Product List",
+  "copyright": "All rights reserved by copyright",
+  "contact": "Contact",
+  "greetings": "Product List",
+  "companyName": "Flavor & Art",
+  "companyDescription": "We are a company where cooking is our passion, and our food is rich, abundant, and homemade.",
+  "starter": "Starters",
+  "mainDish": "Main Dishes",
+  "desserts": "Desserts",
+  "signingOut": "Signing out...",
+  "goodbye": "See you soon!",
+  "signOut": "Sign Out",
+  "signIn": "Sign In",
+  "signUp": "Sign Up",
+  "contactUs": "Contact Us",
+  "cart": {
+    "title": "Shopping Cart",
+    "quantity": "Quantity",
+    "total": "Total",
+    "emptyMessage": "The cart is empty",
+    "emptyCartButton": "Empty Cart",
+    "checkoutButton": "Checkout"
+  },
+  "item": {
+    "viewDetailsButton": "View Details"
+  },
+  "itemCount": {
+    "addToCartButton": "Add to Cart"
+  },
+  "itemDetail": {
+    "backButton": "Back"
+  },
+  "product_1": {
+    "titulo": "Tacos",
+    "descripcion": "Tacos are a popular Mexican dish made of small tortillas, typically corn, filled with a variety of ingredients. Classic fillings include carne asada, chicken, fish, or carnitas, accompanied by onion, cilantro, and fresh salsa. Other toppings like guacamole, cheese, or refried beans can be added. Tacos stand out for their intense flavor and customization, being a staple at informal events as well as family meals."
+  },
+  "orderConfirmation": {
+    "title": "Order Created",
+    "successMessage": "Your order was created successfully",
+    "redirectMessage": "Returning to the main menu"
+  },
+  "signin": {
+    "title": "Sign In",
+    "emailPlaceholder": "Email address",
+    "passwordPlaceholder": "Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot your password?",
+    "signInButton": "Sign In",
+    "noAccount": "Don't have an account?",
+    "register": "Register",
+    "orSignInWith": "or sign in with",
+    "success": "Sign in successful",
+    "errorLoggingIn": "Error signing in",
+    "errors": {
+      "auth/user-not-found": "User not found",
+      "auth/wrong-password": "Incorrect password",
+      "auth/too-many-requests": "Too many attempts, try again later",
+      "default": "An error occurred. Please try again."
+    }
+  },
+  "signup": {
+    "title": "Sign Up",
+    "emailPlaceholder": "Email address",
+    "passwordPlaceholder": "Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot your password?",
+    "registerButton": "Register",
+    "alreadyHaveAccount": "Already have an account?",
+    "signIn": "Sign In",
+    "orSignInWith": "or sign in with",
+    "success": "Account created successfully",
+    "errorLoggingIn": "Error creating account",
+    "errors": {
+      "auth/email-already-in-use": "Email already in use",
+      "auth/invalid-email": "Invalid email address",
+      "auth/weak-password": "Weak password, minimum 6 characters",
+      "default": "An error occurred. Please try again."
+    }
+  }
+}

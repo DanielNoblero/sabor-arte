@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../Context/Autenticación';
 import CartWidget from '../CartWidget/CartWidget';
+import { useTranslation } from 'react-i18next';
 
 function Nav() {
+    const { t, i18n } = useTranslation(); // Hook para traducción
     const { user, signOut } = useAuth();
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [showGreeting, setShowGreeting] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     useEffect(() => {
         if (!user && showGreeting) {
@@ -33,38 +36,61 @@ function Nav() {
         }
     };
 
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+
+    const changeLanguage = (language) => {
+        i18n.changeLanguage(language);
+    };
+
     return (
         <header className="header">
-            <Link to="/" className="logo">
-                <i className='bx bxs-bowl-hot'></i>Sabor&Arte
-            </Link>
-            <input type="checkbox" id="check" />
-            <label htmlFor="check" className="icons">
-                <i className="bx bx-menu" id="menu-icon"></i>
-                <i className="bx bx-x" id="close-icon"></i>
-            </label>
-            <nav className="navbar">
-                <Link to="/category/Entradas" className="nav-item" style={{ '--i': 0 }}>Entradas</Link>
-                <Link to="/category/Principal" className="nav-item" style={{ '--i': 1 }}>Principal</Link>
-                <Link to="/category/Postre" className="nav-item" style={{ '--i': 2 }}>Postres</Link>
-                {user ? (
-                    loading ? (
-                        <span className="nav-item" style={{ '--i': 3 }}>Cerrando sesión...</span>
-                    ) : showGreeting ? (
-                        <span className="nav-item" style={{ '--i': 3 }}>¡Hasta pronto!</span>
-                    ) : (
-                        <Link onClick={handleSignOut} className="nav-item" style={{ '--i': 3 }}>Cerrar sesión</Link>
-                    )
-                ) : (
-                    <>
-                        <Link to="/signin" className="nav-item" style={{ '--i': 3 }}>Iniciar sesión</Link>
-                        <Link to="/signup" className="nav-item" style={{ '--i': 4 }}>Registrarse</Link>
-                    </>
-                )}
-                <Link to="/contactus" className="nav-item" style={{ '--i': 5 }}>Contáctenos</Link>
-                <CartWidget />
-            </nav>
-        </header>
+    <Link to="/" className="logo">
+        <i className="bx bxs-bowl-hot"></i>{t('companyName')}
+    </Link>
+    
+    <input type="checkbox" id="check" />
+    <label htmlFor="check" className="icons">
+        <i className="bx bx-menu" id="menu-icon"></i>
+        <i className="bx bx-x" id="close-icon"></i>
+    </label>
+    <nav className="navbar">
+    
+        <Link to="/category/Entradas" className="nav-item">{t('starter')}</Link>
+        <Link to="/category/Principal" className="nav-item">{t('mainDish')}</Link>
+        
+        <Link to="/category/Postre" className="nav-item">{t('desserts')}</Link>{user ? (
+        loading ? (
+            <span className="nav-item" style={{ '--i': 3 }}>{t('signingOut')}</span>
+        ) : showGreeting ? (
+            <span className="nav-item" style={{ '--i': 3 }}>{t('goodbye')}</span>
+        ) : (
+            <Link onClick={handleSignOut} className="nav-item" style={{ '--i': 3 }}>{t('signOut')}</Link>
+        )
+    ) : (
+        <>
+            <Link to="/signin" className="nav-item" style={{ '--i': 3 }}>{t('signIn')}</Link>
+            <Link to="/signup" className="nav-item" style={{ '--i': 4 }}>{t('signUp')}</Link>
+        </>
+    )}
+        <div className="dropdown">
+            <button className="dropbtn" onClick={toggleDropdown}>
+                {t('Language')}
+            </button>
+            {isDropdownOpen && (
+                <div className="dropdown-content">
+                    <span onClick={() => changeLanguage('es')}>{t('Spanish')}</span>
+                    <span onClick={() => changeLanguage('en')}>{t('English')}</span>
+                </div>
+            )}
+        </div>
+        <div className="cart-widget-container">
+            <CartWidget />
+        </div>
+    </nav>
+</header>
+
     );
 }
 

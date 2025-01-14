@@ -1,0 +1,81 @@
+{
+  "copyright": "Todos los derechos reservados por copyright",
+  "contact": "Contacto",
+  "greetings": "Lista de productos",
+  "companyName": "Sabor & Arte",
+  "companyDescription": "Somos una empresa donde cocinar es nuestra pasión y nuestra comida se basa en una comida rica, abundante y casera.",
+  "starter": "Entradas",
+  "mainDish": "Platos Principales",
+  "desserts": "Postres",
+  "signingOut": "Cerrando sesión...",
+  "goodbye": "¡Hasta pronto!",
+  "signOut": "Cerrar sesión",
+  "signIn": "Iniciar sesión",
+  "signUp": "Registrarse",
+  "contactUs": "Contáctenos",
+  "Language": "Idioma",
+  "cart": {
+    "title": "Carrito",
+    "quantity": "Cantidad",
+    "total": "Total",
+    "emptyMessage": "El carrito está vacío",
+    "emptyCartButton": "Vaciar Carrito",
+    "checkoutButton": "Pagar"
+  },
+  "item": {
+    "viewDetailsButton": "Ver detalle"
+  },
+  "itemCount": {
+    "addToCartButton": "Agregar al Carrito"
+  },
+  "itemDetail": {
+    "backButton": "Volver"
+  },
+  "product_1": {
+    "titulo": "Tacos",
+    "descripcion": "Los tacos son un platillo mexicano popular que consiste en tortillas pequeñas, típicamente de maíz, rellenas de una variedad de ingredientes. Los rellenos clásicos incluyen carne asada, pollo, pescado, o carnitas, acompañados de cebolla, cilantro, y salsa fresca. Se pueden añadir otros complementos como guacamole, queso, o frijoles refritos. Los tacos destacan por su sabor intenso y su capacidad de personalización, siendo un alimento básico tanto en eventos informales como en comidas familiares."
+  },
+  "orderConfirmation": {
+    "title": "Orden Creada",
+    "successMessage": "Su orden fue creada correctamente",
+    "redirectMessage": "Volviendo al menú principal"
+  },
+  "signin": {
+    "title": "Iniciar Sesión",
+    "emailPlaceholder": "Correo electrónico",
+    "passwordPlaceholder": "Contraseña",
+    "rememberMe": "Recordarme",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "signInButton": "Entrar",
+    "noAccount": "¿No tienes cuenta?",
+    "register": "Regístrate",
+    "orSignInWith": "o inicia sesión con",
+    "success": "Inicio de sesión exitoso",
+    "errorLoggingIn": "Error al iniciar sesión",
+    "errors": {
+      "auth/user-not-found": "Usuario no encontrado",
+      "auth/wrong-password": "Contraseña incorrecta",
+      "auth/too-many-requests": "Demasiados intentos, intenta más tarde",
+      "default": "Ocurrió un error. Por favor, inténtalo de nuevo."
+    }
+  },
+  "signup": {
+    "title": "Registrarse",
+    "emailPlaceholder": "Correo electrónico",
+    "passwordPlaceholder": "Contraseña",
+    "rememberMe": "Recordarme",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "registerButton": "Registrarse",
+    "alreadyHaveAccount": "¿Ya tienes cuenta?",
+    "signIn": "Iniciar Sesión",
+    "orSignInWith": "o regístrate con",
+    "success": "Cuenta creada exitosamente",
+    "errorLoggingIn": "Error al crear la cuenta",
+    "errors": {
+      "auth/email-already-in-use": "El correo ya está en uso",
+      "auth/invalid-email": "Correo electrónico inválido",
+      "auth/weak-password": "Contraseña débil, mínimo 6 caracteres",
+      "default": "Ocurrió un error. Por favor, inténtalo de nuevo."
+    }
+  }
+}
