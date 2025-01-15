@@ -12,31 +12,46 @@ export const ItemDetailContainer = () => {
     const { t, i18n } = useTranslation();
 
     useEffect(() => {
-        console.log('Fetching product with ID:', id);
-        getDoc(doc(db, "products", id))
-            .then((querySnapshot) => {
+        const fetchProduct = async () => {
+            try {
+                // Depuración: Verifica el idioma actual
+                console.log('Idioma actual:', i18n.language);
+                
+                const docRef = doc(db, "products", id);
+                const querySnapshot = await getDoc(docRef);
+                
                 if (querySnapshot.exists()) {
                     const productData = querySnapshot.data();
-                    console.log('Product data from Firestore:', productData);
+                    
+                    // Depuración: Verifica las claves de traducción
+                    console.log('Intentando traducir:', `products.${id}.titulo`);
+                    console.log('Traducción encontrada:', t(`products.${id}.titulo`));
+                    
                     const product = {
                         id: querySnapshot.id,
-                        titulo: t(`product_${id}.titulo`, { defaultValue: productData.titulo }),
-                        descripcion: t(`product_${id}.descripcion`, { defaultValue: productData.descripcion }),
+                        titulo: t(`products.${id}.titulo`) || productData.titulo,
+                        descripcion: t(`products.${id}.descripcion`) || productData.descripcion,
                         precio: productData.precio,
                         stock: productData.stock,
                         img: productData.img,
+                        category: t(`products.${id}.category`) || productData.category
                     };
-                    console.log('Translated product data:', product);
+                    
+                    // Depuración: Muestra el producto traducido
+                    console.log('Producto traducido:', product);
+                    
                     setProduct(product);
                 } else {
                     setError('Producto no encontrado');
                 }
-            })
-            .catch((err) => {
-                console.error('Error fetching product:', err);
+            } catch (err) {
+                console.error('Error al cargar el producto:', err);
                 setError('Error al cargar el producto');
-            });
-    }, [id, i18n.language]);
+            }
+        };
+
+        fetchProduct();
+    }, [id, i18n.language, t]);
 
     return (
         <div>

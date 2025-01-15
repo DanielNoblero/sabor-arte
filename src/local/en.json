@@ -36,6 +36,16 @@
   "itemDetail": {
     "backButton": "Back"
   },
+  "products": {
+    "product_1": {
+      "titulo": "Tacos",
+      "descripcion": "Tacos are a popular Mexican dish made of small tortillas, typically corn, filled with a variety of ingredients. Classic fillings include carne asada, chicken, fish, or carnitas, accompanied by onion, cilantro, and fresh salsa. Other toppings like guacamole, cheese, or refried beans can be added. Tacos stand out for their intense flavor and customization, being a staple at informal events as well as family meals."
+    },
+    "product_2": {
+      "titulo": "Hamburger",
+      "descripcion": "Hamburgers are a classic American dish consisting of a ground beef patty served in a bun. The patty is seasoned and grilled, then topped with cheese, lettuce, tomato, onion, pickles, and condiments like ketchup and mustard. Hamburgers are known for their juicy flavor and versatility, with endless variations and toppings to suit every taste."
+    }
+  },
   "product_1": {
     "titulo": "Tacos",
     "descripcion": "Tacos are a popular Mexican dish made of small tortillas, typically corn, filled with a variety of ingredients. Classic fillings include carne asada, chicken, fish, or carnitas, accompanied by onion, cilantro, and fresh salsa. Other toppings like guacamole, cheese, or refried beans can be added. Tacos stand out for their intense flavor and customization, being a staple at informal events as well as family meals."
