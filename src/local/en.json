@@ -14,7 +14,7 @@
   "signIn": "Sign In",
   "signUp": "Sign Up",
   "contactUs": "Contact Us",
-    "cart": {
+  "cart": {
     "title": "Your Cart",
     "quantity": "Quantity",
     "total": "Total",
@@ -44,17 +44,48 @@
     "product_2": {
       "titulo": "Hamburger",
       "descripcion": "Hamburgers are a classic American dish consisting of a ground beef patty served in a bun. The patty is seasoned and grilled, then topped with cheese, lettuce, tomato, onion, pickles, and condiments like ketchup and mustard. Hamburgers are known for their juicy flavor and versatility, with endless variations and toppings to suit every taste."
+    },
+    "product_3": {
+      "titulo": "Empanadas",
+      "descripcion": "Empanadas are a type of stuffed pastry found in various cultures worldwide, especially popular in Latin America, Spain, and the Philippines. They consist of an outer dough, which can be made of wheat or corn flour, filled with a variety of ingredients that vary by region. Common fillings include meat, chicken, cheese, vegetables, or seafood, often accompanied by onion, hard-boiled egg, olives, and spices. Empanadas can be baked or fried."
+    },
+    "product_4": {
+      "titulo": "Passion Fruit Dessert",
+      "descripcion": "The passion fruit dessert combines the freshness of passion fruit with the characteristic sweetness of condensed milk and the creamy texture of cream. This dessert has earned a special place on the table of tropical flavor lovers."
+    },
+    "product_5": {
+      "titulo": "Pizza",
+      "descripcion": "A typical homemade pizza consists of a crispy and fluffy freshly baked crust topped with a rich, aromatic tomato sauce. Generous layers of melted and golden mozzarella cheese are added, complemented by toppings of choice such as pepperoni slices, fresh mushrooms, bell peppers, basil, fresh tomatoes, and onions. This dish is appreciated for its freshness and the ability to customize the toppings to each person's preferences."
+    },
+    "product_6": {
+      "titulo": "Tiramisu",
+      "descripcion": "The classic Italian dessert that has delighted taste buds for generations. Layers of ladyfinger biscuits soaked in coffee, rich mascarpone cream, and a dusting of cocoa powder. Tiramisu is the perfect ending to any meal, with variations featuring chocolate, orange, raspberry, or even pumpkin spice."
+    },
+    "product_7": {
+      "titulo": "Chicken",
+      "descripcion": "Baked chicken drumsticks are a simple and delicious dish, perfect for a comforting meal. This dish consists of chicken legs marinated in a blend of spices, herbs, and sometimes a touch of lemon juice or garlic, then baked until achieving a golden, crispy skin while keeping the inside juicy and tender. Baked chicken legs can be served with a variety of side dishes, such as roasted vegetables, mashed potatoes, or a fresh salad, making this recipe a versatile option for any occasion."
+    },
+    "product_8": {
+      "titulo": "Tapas",
+      "descripcion": "Galician tapas are an exquisite selection of small dishes and appetizers originating from Galicia, in northwest Spain. They are characterized by their diversity and richness, incorporating seafood and farm products from Galicia, featuring ingredients such as fresh seafood, cured meats, and local cheeses. These tapas are not only delicious but also an essential part of Galician culinary culture, offering a shared and enjoyable dining experience."
+    },
+    "product_9": {
+      "titulo": "Pasta",
+      "descripcion": "Pasta with sauce is a classic and comforting dish consisting of al dente-cooked noodles, such as spaghetti or penne, generously coated in a rich and flavorful sauce. Sauce options range from a traditional marinara loaded with fresh tomatoes and aromatic herbs to a creamy Alfredo sauce with a subtle touch of garlic and Parmesan cheese. This dish can be customized with additions like meatballs, roasted vegetables, or seafood, making it a versatile and satisfying meal."
+    },
+    "product_10": {
+      "titulo": "Cheesecake",
+      "descripcion": "Cheesecake is an immensely popular dessert worldwide. Its origin dates back to ancient Greece, where a simpler version was made with fresh cheese, honey, and wheat. Over time, this delight has evolved into a variety of flavors and styles."
+    },
+    "product_11": {
+      "titulo": "Vegetable Soup",
+      "descripcion": "Vegetable soup is a healthy and comforting dish made with a variety of vegetables cooked in broth. Common ingredients include carrots, potatoes, onions, celery, tomatoes, and spinach, though it can be adapted based on availability and preference. It is seasoned with herbs and spices like garlic, parsley, thyme, and bay leaf. It's nutritious, low in calories, and rich in vitamins, minerals, and fiber, making it ideal for a balanced diet."
+    },
+    "product_12": {
+      "titulo": "Flan",
+      "descripcion": "Egg flan is a traditional and popular dessert in many cultures worldwide. It has a smooth and delicate texture, made mainly with eggs, milk, and sugar, although there are variations in ingredients and preparation methods depending on the region."
     }
   },
-  "product_1": {
-    "titulo": "Tacos",
-    "descripcion": "Tacos are a popular Mexican dish made of small tortillas, typically corn, filled with a variety of ingredients. Classic fillings include carne asada, chicken, fish, or carnitas, accompanied by onion, cilantro, and fresh salsa. Other toppings like guacamole, cheese, or refried beans can be added. Tacos stand out for their intense flavor and customization, being a staple at informal events as well as family meals."
-  },
-  "product_2": {
-    "titulo": "Hamburger",
-    "descripcion": "Hamburgers are a classic American dish consisting of a ground beef patty served in a bun. The patty is seasoned and grilled, then topped with cheese, lettuce, tomato, onion, pickles, and condiments like ketchup and mustard. Hamburgers are known for their juicy flavor and versatility, with endless variations and toppings to suit every taste."
-  },
-  
   "orderConfirmation": {
     "title": "Order Created",
     "successMessage": "Your order was created successfully",
@@ -97,5 +128,24 @@
       "auth/weak-password": "Weak password, minimum 6 characters",
       "default": "An error occurred. Please try again."
     }
-  }
+  },
+
+  "myProfile": "My Profile",
+  "profileTitle": "My Profile",
+  "userDetails": "User Details",
+  "email": "Email",
+  "changePassword": "Change Password",
+  "currentPassword": "Current Password",
+  "newPassword": "New Password",
+  "updatePassword": "Update Password",
+  "purchaseHistory": "Purchase History",
+  "noPurchases": "No purchase history found.",
+  "errorPassword": "Failed to update password. Please check your current password.",
+  "successPassword": "Password updated successfully!",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "updateName": "Update Name",
+  "errorName": "Please enter both first and last name.",
+  "successName": "Name updated successfully!",
+  "userNotFound": "User not found in the database."
 }
