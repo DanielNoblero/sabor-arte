@@ -1,0 +1,12 @@
+image: node:latest  # Usamos una imagen de Node.js para construir el proyecto
+
+pages:
+  script:
+    - npm install  # Instalar dependencias si las tienes
+    - npm run build  # Construir el proyecto (ajusta según tu proyecto)
+    - cp -R dist/ public/  # Copiar los archivos generados a la carpeta 'public' para GitLab Pages
+  artifacts:
+    paths:
+      - public  # Indicar que la carpeta 'public' contiene el sitio web generado
+  only:
+    - main  # Desplegar solo cuando haya cambios en la rama 'main'
