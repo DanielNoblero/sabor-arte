@@ -22,10 +22,9 @@ const App = () => {
   const location = useLocation();
 
   // Excluye explícitamente las rutas de /signin, /signup y /profile del renderizado de Main
-  const showMain = ['/', '/detail', '/category', '/cart'].some(path =>
-    location.pathname.startsWith(path)
-  ) && !['/signin', '/signup', '/profile'].includes(location.pathname);
-
+  const showMain = ['/detail', '/category', '/cart', '/'].includes(location.pathname) &&
+  !['/signin', '/signup', '/contactus', '/profile'].includes(location.pathname);
+  
   return (
     <AuthProvider>
       <CartProvider>

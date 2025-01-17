@@ -12,7 +12,6 @@
   "signOut": "Cerrar sesión",
   "signIn": "Iniciar sesión",
   "signUp": "Registrarse",
-  "contactUs": "Contáctenos",
   "cart": {
     "title": "Tu Carrito",
     "quantity": "Cantidad",
@@ -145,6 +144,13 @@
   "updateName": "Actualizar Nombre",
   "errorName": "Por favor ingresa tanto el nombre como el apellido.",
   "successName": "¡Nombre actualizado con éxito!",
-  "userNotFound": "Usuario no encontrado en la base de datos."
+  "userNotFound": "Usuario no encontrado en la base de datos.",
+  "contactUs": {
+    "title": "Contáctenos",
+    "emailPlaceholder": "Correo electrónico",
+    "subjectPlaceholder": "Asunto",
+    "messagePlaceholder": "Mensaje",
+    "sendButton": "Enviar"
+  }
 
 }

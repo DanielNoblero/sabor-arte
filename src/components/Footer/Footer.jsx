@@ -18,7 +18,7 @@ export function Footer() {
                 <a href="#" className="fab fa-instagram"></a>
                 <a href="https://github.com/DanielNoblero/Portafolio.git" className="fab fa-github"></a>
             </div>
-            <a href="html/contactus.html">{t('contact')}</a>
+            <a href="../ContactUs">{t('contact')}</a>
         </footer>
     );
 }

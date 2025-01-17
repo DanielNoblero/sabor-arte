@@ -13,7 +13,6 @@
   "signOut": "Sign Out",
   "signIn": "Sign In",
   "signUp": "Sign Up",
-  "contactUs": "Contact Us",
   "cart": {
     "title": "Your Cart",
     "quantity": "Quantity",
@@ -147,5 +146,12 @@
   "updateName": "Update Name",
   "errorName": "Please enter both first and last name.",
   "successName": "Name updated successfully!",
-  "userNotFound": "User not found in the database."
+  "userNotFound": "User not found in the database.",
+  "contactUs": {
+    "title": "Contact Us",
+    "emailPlaceholder": "Email",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Message",
+    "sendButton": "Send"
+  }
 }
