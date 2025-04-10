@@ -5,6 +5,7 @@ pages:
     - npm install  # Instalar dependencias si las tienes
     - npm run build  # Construir el proyecto (ajusta según tu proyecto)
     - cp -R dist/ public/  # Copiar los archivos generados a la carpeta 'public' para GitLab Pages
+    - npm run test
   artifacts:
     paths:
       - public  # Indicar que la carpeta 'public' contiene el sitio web generado
